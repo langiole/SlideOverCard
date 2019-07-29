@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB8267A522E7FE46009033C5 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8267A422E7FE46009033C5 /* BlurView.swift */; };
+		FB9E06F022E402C300F83406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E06EF22E402C300F83406 /* AppDelegate.swift */; };
+		FB9E06F222E402C300F83406 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E06F122E402C300F83406 /* SceneDelegate.swift */; };
+		FB9E06F422E402C300F83406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E06F322E402C300F83406 /* ContentView.swift */; };
+		FB9E06F622E402C500F83406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9E06F522E402C500F83406 /* Assets.xcassets */; };
+		FB9E06F922E402C500F83406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9E06F822E402C500F83406 /* Preview Assets.xcassets */; };
+		FB9E06FC22E402C500F83406 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9E06FA22E402C500F83406 /* LaunchScreen.storyboard */; };
+		FB9E070722E402C500F83406 /* SlideOverCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E070622E402C500F83406 /* SlideOverCardTests.swift */; };
+		FB9E071222E402C500F83406 /* SlideOverCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E071122E402C500F83406 /* SlideOverCardUITests.swift */; };
+		FB9E072022E4173800F83406 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E071F22E4173700F83406 /* MapView.swift */; };
+		FB9E072222E41AC500F83406 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E072122E41AC500F83406 /* CardView.swift */; };
+		FB9E072422E6C30300F83406 /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E072322E6C30300F83406 /* Handle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB9E070322E402C500F83406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB9E06E422E402C300F83406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB9E06EB22E402C300F83406;
+			remoteInfo = SlideOverCard;
+		};
+		FB9E070E22E402C500F83406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB9E06E422E402C300F83406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB9E06EB22E402C300F83406;
+			remoteInfo = SlideOverCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB8267A422E7FE46009033C5 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = ../../../../../System/Volumes/Data/Users/leeangioletti/Documents/SlideOverCard/SlideOverCard/BlurView.swift; sourceTree = "<group>"; };
+		FB9E06EC22E402C300F83406 /* SlideOverCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOverCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9E06EF22E402C300F83406 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB9E06F122E402C300F83406 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB9E06F322E402C300F83406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB9E06F522E402C500F83406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB9E06F822E402C500F83406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB9E06FB22E402C500F83406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB9E06FD22E402C500F83406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9E070222E402C500F83406 /* SlideOverCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideOverCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9E070622E402C500F83406 /* SlideOverCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardTests.swift; sourceTree = "<group>"; };
+		FB9E070822E402C500F83406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9E070D22E402C500F83406 /* SlideOverCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideOverCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9E071122E402C500F83406 /* SlideOverCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardUITests.swift; sourceTree = "<group>"; };
+		FB9E071322E402C500F83406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9E071F22E4173700F83406 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FB9E072122E41AC500F83406 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FB9E072322E6C30300F83406 /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB9E06E922E402C300F83406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9E06FF22E402C500F83406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9E070A22E402C500F83406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB9E06E322E402C300F83406 = {
+			isa = PBXGroup;
+			children = (
+				FB9E06EE22E402C300F83406 /* SlideOverCard */,
+				FB9E070522E402C500F83406 /* SlideOverCardTests */,
+				FB9E071022E402C500F83406 /* SlideOverCardUITests */,
+				FB9E06ED22E402C300F83406 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB9E06ED22E402C300F83406 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E06EC22E402C300F83406 /* SlideOverCard.app */,
+				FB9E070222E402C500F83406 /* SlideOverCardTests.xctest */,
+				FB9E070D22E402C500F83406 /* SlideOverCardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB9E06EE22E402C300F83406 /* SlideOverCard */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E06EF22E402C300F83406 /* AppDelegate.swift */,
+				FB9E06F122E402C300F83406 /* SceneDelegate.swift */,
+				FB9E06F322E402C300F83406 /* ContentView.swift */,
+				FB9E072122E41AC500F83406 /* CardView.swift */,
+				FB8267A422E7FE46009033C5 /* BlurView.swift */,
+				FB9E072322E6C30300F83406 /* Handle.swift */,
+				FB9E071F22E4173700F83406 /* MapView.swift */,
+				FB9E06F522E402C500F83406 /* Assets.xcassets */,
+				FB9E06FA22E402C500F83406 /* LaunchScreen.storyboard */,
+				FB9E06FD22E402C500F83406 /* Info.plist */,
+				FB9E06F722E402C500F83406 /* Preview Content */,
+			);
+			path = SlideOverCard;
+			sourceTree = "<group>";
+		};
+		FB9E06F722E402C500F83406 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E06F822E402C500F83406 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB9E070522E402C500F83406 /* SlideOverCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E070622E402C500F83406 /* SlideOverCardTests.swift */,
+				FB9E070822E402C500F83406 /* Info.plist */,
+			);
+			path = SlideOverCardTests;
+			sourceTree = "<group>";
+		};
+		FB9E071022E402C500F83406 /* SlideOverCardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E071122E402C500F83406 /* SlideOverCardUITests.swift */,
+				FB9E071322E402C500F83406 /* Info.plist */,
+			);
+			path = SlideOverCardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB9E06EB22E402C300F83406 /* SlideOverCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9E071622E402C500F83406 /* Build configuration list for PBXNativeTarget "SlideOverCard" */;
+			buildPhases = (
+				FB9E06E822E402C300F83406 /* Sources */,
+				FB9E06E922E402C300F83406 /* Frameworks */,
+				FB9E06EA22E402C300F83406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideOverCard;
+			productName = SlideOverCard;
+			productReference = FB9E06EC22E402C300F83406 /* SlideOverCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB9E070122E402C500F83406 /* SlideOverCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9E071922E402C500F83406 /* Build configuration list for PBXNativeTarget "SlideOverCardTests" */;
+			buildPhases = (
+				FB9E06FE22E402C500F83406 /* Sources */,
+				FB9E06FF22E402C500F83406 /* Frameworks */,
+				FB9E070022E402C500F83406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB9E070422E402C500F83406 /* PBXTargetDependency */,
+			);
+			name = SlideOverCardTests;
+			productName = SlideOverCardTests;
+			productReference = FB9E070222E402C500F83406 /* SlideOverCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB9E070C22E402C500F83406 /* SlideOverCardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9E071C22E402C500F83406 /* Build configuration list for PBXNativeTarget "SlideOverCardUITests" */;
+			buildPhases = (
+				FB9E070922E402C500F83406 /* Sources */,
+				FB9E070A22E402C500F83406 /* Frameworks */,
+				FB9E070B22E402C500F83406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB9E070F22E402C500F83406 /* PBXTargetDependency */,
+			);
+			name = SlideOverCardUITests;
+			productName = SlideOverCardUITests;
+			productReference = FB9E070D22E402C500F83406 /* SlideOverCardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB9E06E422E402C300F83406 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Lee Angioletti";
+				TargetAttributes = {
+					FB9E06EB22E402C300F83406 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					FB9E070122E402C500F83406 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = FB9E06EB22E402C300F83406;
+					};
+					FB9E070C22E402C500F83406 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = FB9E06EB22E402C300F83406;
+					};
+				};
+			};
+			buildConfigurationList = FB9E06E722E402C300F83406 /* Build configuration list for PBXProject "SlideOverCard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB9E06E322E402C300F83406;
+			productRefGroup = FB9E06ED22E402C300F83406 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB9E06EB22E402C300F83406 /* SlideOverCard */,
+				FB9E070122E402C500F83406 /* SlideOverCardTests */,
+				FB9E070C22E402C500F83406 /* SlideOverCardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB9E06EA22E402C300F83406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9E06FC22E402C500F83406 /* LaunchScreen.storyboard in Resources */,
+				FB9E06F922E402C500F83406 /* Preview Assets.xcassets in Resources */,
+				FB9E06F622E402C500F83406 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9E070022E402C500F83406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9E070B22E402C500F83406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB9E06E822E402C300F83406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9E06F022E402C300F83406 /* AppDelegate.swift in Sources */,
+				FB8267A522E7FE46009033C5 /* BlurView.swift in Sources */,
+				FB9E072022E4173800F83406 /* MapView.swift in Sources */,
+				FB9E06F222E402C300F83406 /* SceneDelegate.swift in Sources */,
+				FB9E06F422E402C300F83406 /* ContentView.swift in Sources */,
+				FB9E072222E41AC500F83406 /* CardView.swift in Sources */,
+				FB9E072422E6C30300F83406 /* Handle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9E06FE22E402C500F83406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9E070722E402C500F83406 /* SlideOverCardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9E070922E402C500F83406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9E071222E402C500F83406 /* SlideOverCardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB9E070422E402C500F83406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB9E06EB22E402C300F83406 /* SlideOverCard */;
+			targetProxy = FB9E070322E402C500F83406 /* PBXContainerItemProxy */;
+		};
+		FB9E070F22E402C500F83406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB9E06EB22E402C300F83406 /* SlideOverCard */;
+			targetProxy = FB9E070E22E402C500F83406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB9E06FA22E402C500F83406 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB9E06FB22E402C500F83406 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB9E071422E402C500F83406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB9E071522E402C500F83406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB9E071722E402C500F83406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "SlideOverCard/Preview\\ Content";
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SlideOverCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeangioletti.SlideOverCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB9E071822E402C500F83406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "SlideOverCard/Preview\\ Content";
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SlideOverCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeangioletti.SlideOverCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB9E071A22E402C500F83406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				INFOPLIST_FILE = SlideOverCardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeangioletti.SlideOverCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideOverCard.app/SlideOverCard";
+			};
+			name = Debug;
+		};
+		FB9E071B22E402C500F83406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				INFOPLIST_FILE = SlideOverCardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeangioletti.SlideOverCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideOverCard.app/SlideOverCard";
+			};
+			name = Release;
+		};
+		FB9E071D22E402C500F83406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				INFOPLIST_FILE = SlideOverCardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeangioletti.SlideOverCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlideOverCard;
+			};
+			name = Debug;
+		};
+		FB9E071E22E402C500F83406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				INFOPLIST_FILE = SlideOverCardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeangioletti.SlideOverCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlideOverCard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB9E06E722E402C300F83406 /* Build configuration list for PBXProject "SlideOverCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9E071422E402C500F83406 /* Debug */,
+				FB9E071522E402C500F83406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9E071622E402C500F83406 /* Build configuration list for PBXNativeTarget "SlideOverCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9E071722E402C500F83406 /* Debug */,
+				FB9E071822E402C500F83406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9E071922E402C500F83406 /* Build configuration list for PBXNativeTarget "SlideOverCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9E071A22E402C500F83406 /* Debug */,
+				FB9E071B22E402C500F83406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9E071C22E402C500F83406 /* Build configuration list for PBXNativeTarget "SlideOverCardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9E071D22E402C500F83406 /* Debug */,
+				FB9E071E22E402C500F83406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB9E06E422E402C300F83406 /* Project object */;
+}
