@@ -14,6 +14,6 @@ struct Handle: View {
         RoundedRectangle(cornerRadius: handleThickness / 2.0)
             .frame(width: 36, height: handleThickness)
             .padding(5)
-			.foregroundColor(Color(uiColor: .tertiaryLabel))
+			.foregroundColor(Color.secondary)
     }
 }

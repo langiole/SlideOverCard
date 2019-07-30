@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB8267A522E7FE46009033C5 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8267A422E7FE46009033C5 /* BlurView.swift */; };
+		FB8267A522E7FE46009033C5 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8267A422E7FE46009033C5 /* BackgroundView.swift */; };
 		FB9E06F022E402C300F83406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E06EF22E402C300F83406 /* AppDelegate.swift */; };
 		FB9E06F222E402C300F83406 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E06F122E402C300F83406 /* SceneDelegate.swift */; };
 		FB9E06F422E402C300F83406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E06F322E402C300F83406 /* ContentView.swift */; };
@@ -19,8 +19,6 @@
 		FB9E072022E4173800F83406 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E071F22E4173700F83406 /* MapView.swift */; };
 		FB9E072222E41AC500F83406 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E072122E41AC500F83406 /* CardView.swift */; };
 		FB9E072422E6C30300F83406 /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E072322E6C30300F83406 /* Handle.swift */; };
-		FBDEE89022EFD30900C6BC82 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEE88F22EFD30900C6BC82 /* Color+.swift */; };
-		FBDEE89222EFD3A300C6BC82 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEE89122EFD3A300C6BC82 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB8267A422E7FE46009033C5 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = ../../../../../System/Volumes/Data/Users/leeangioletti/Documents/SlideOverCard/SlideOverCard/BlurView.swift; sourceTree = "<group>"; };
+		FB8267A422E7FE46009033C5 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = ../../../../../System/Volumes/Data/Users/leeangioletti/Documents/SlideOverCard/SlideOverCard/BackgroundView.swift; sourceTree = "<group>"; };
 		FB9E06EC22E402C300F83406 /* SlideOverCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOverCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9E06EF22E402C300F83406 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB9E06F122E402C300F83406 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +57,6 @@
 		FB9E071F22E4173700F83406 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FB9E072122E41AC500F83406 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FB9E072322E6C30300F83406 /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
-		FBDEE88F22EFD30900C6BC82 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+.swift"; path = "../../../../../System/Volumes/Data/Users/leeangioletti/Documents/SlideOverCard/SlideOverCard/Color+.swift"; sourceTree = "<group>"; };
-		FBDEE89122EFD3A300C6BC82 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+.swift"; path = "../../../../../System/Volumes/Data/Users/leeangioletti/Documents/SlideOverCard/SlideOverCard/UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +111,8 @@
 				FB9E06F122E402C300F83406 /* SceneDelegate.swift */,
 				FB9E06F322E402C300F83406 /* ContentView.swift */,
 				FB9E072122E41AC500F83406 /* CardView.swift */,
-				FB8267A422E7FE46009033C5 /* BlurView.swift */,
+				FB8267A422E7FE46009033C5 /* BackgroundView.swift */,
 				FB9E072322E6C30300F83406 /* Handle.swift */,
-				FBDEE88F22EFD30900C6BC82 /* Color+.swift */,
-				FBDEE89122EFD3A300C6BC82 /* UIColor+.swift */,
 				FB9E071F22E4173700F83406 /* MapView.swift */,
 				FB9E06F522E402C500F83406 /* Assets.xcassets */,
 				FB9E06FA22E402C500F83406 /* LaunchScreen.storyboard */,
@@ -286,14 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9E06F022E402C300F83406 /* AppDelegate.swift in Sources */,
-				FBDEE89022EFD30900C6BC82 /* Color+.swift in Sources */,
-				FB8267A522E7FE46009033C5 /* BlurView.swift in Sources */,
+				FB8267A522E7FE46009033C5 /* BackgroundView.swift in Sources */,
 				FB9E072022E4173800F83406 /* MapView.swift in Sources */,
 				FB9E06F222E402C300F83406 /* SceneDelegate.swift in Sources */,
 				FB9E06F422E402C300F83406 /* ContentView.swift in Sources */,
 				FB9E072222E41AC500F83406 /* CardView.swift in Sources */,
 				FB9E072422E6C30300F83406 /* Handle.swift in Sources */,
-				FBDEE89222EFD3A300C6BC82 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

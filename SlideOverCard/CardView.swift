@@ -11,10 +11,8 @@ import SwiftUI
 struct CardView<Content: View>: View {
 	@GestureState private var dragState = DragState.inactive
 	@State private var position = DefaultPosition.bottom
-	@State private var v_abs = 0.0
-	@State private var dist = 0.0
 	var blurEnabled: Bool = false
-	var backgroundColor: UIColor = .tertiarySystemBackground
+	var backgroundColor: UIColor = .secondarySystemBackground
 	var content: () -> Content
 	
 	var body: some View {
@@ -33,16 +31,13 @@ struct CardView<Content: View>: View {
 			}
 		
 		return ZStack {
-			if blurEnabled {
-				BlurView()
-					.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-			}
+			BackgroundView(blurEnabled: blurEnabled, backgroundColor: backgroundColor)
+				.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 			Handle()
 				.padding(.bottom, 881)
 			self.content()
 		}
 		.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-		.foregroundColor(Color.red)
 		.cornerRadius(10)
 		.shadow(radius: 7)
 		.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())
@@ -63,7 +58,23 @@ struct CardView<Content: View>: View {
 	func dragEnded(drag: DragGesture.Value) {
 		let direction = drag.startLocation.y - drag.location.y
 		let relativePosition = position.rawValue + drag.translation.height
+		let upperhalf = (DefaultPosition.middle.rawValue - DefaultPosition.top.rawValue) / CGFloat(2)
+		let lowerhalf = (DefaultPosition.bottom.rawValue - DefaultPosition.middle.rawValue) / CGFloat(2)
+		
+		// calculated final position if the user dragged and stopped
+		if abs(drag.location.y - drag.predictedEndLocation.y) < 10 {
+			switch position {
+			case .top:
+				if abs(drag.translation.height) < upperhalf { return }
+			case .middle:
+				if (direction > 0 && abs(drag.translation.height) < upperhalf) ||
+					(direction < 0 && abs(drag.translation.height) < lowerhalf) { return }
+			case .bottom:
+				if abs(drag.translation.height) < lowerhalf { return }
+			}
+		}
 
+		// calculate desired final position based on the drag translation
 		if (direction > 0) {
 			if (relativePosition < DefaultPosition.middle.rawValue) {
 				position = DefaultPosition.top
@@ -79,19 +90,15 @@ struct CardView<Content: View>: View {
 				position = DefaultPosition.middle
 			}
 		}
-
-		//self.position = DefaultPosition.middle
-		v_abs = abs(Double(drag.translation.height / CGFloat(drag.time.timeIntervalSinceNow)))
-		dist = Double(position.rawValue - drag.location.y)
 	}
 }
 
 
 
 enum DefaultPosition: CGFloat {
-	case top = 56
-	case middle = 571
-	case bottom = 792
+	case top = 56.0
+	case middle = 571.0
+	case bottom = 792.0
 }
 
 enum DragState {
