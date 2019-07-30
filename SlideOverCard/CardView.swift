@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct CardView<Content: View>: View {
-	@GestureState var dragState = DragState.inactive
-	@State var position = DefaultPosition.bottom
-	@State var v_abs = 0.0
-	@State var dist = 0.0
-	var blurEnabled: Bool? = false
-	//v_rel = v_abs / (target — current)
+	@GestureState private var dragState = DragState.inactive
+	@State private var position = DefaultPosition.bottom
+	@State private var v_abs = 0.0
+	@State private var dist = 0.0
+	var blurEnabled: Bool = false
+	var backgroundColor: UIColor = UIColor.tertiarySystemBackground
 	var content: () -> Content
 	
 	
@@ -24,23 +24,29 @@ struct CardView<Content: View>: View {
 				state = .dragging(translation: drag.translation)
 			}
 			.onEnded(dragEnded)
-				
-		return ZStack {
-			if (blurEnabled!) {
-				BlurView()
-					.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+		let tap = TapGesture()
+			.onEnded { _ in
+				if self.position == DefaultPosition.top {
+					self.position = DefaultPosition.bottom
+				} else {
+					self.position = DefaultPosition.top
+				}
 			}
+		
+		return ZStack {
+			BackgroundView(blurEnabled: self.blurEnabled, backgroundColor: self.backgroundColor)
+				.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 			Handle()
 				.padding(.bottom, 881)
 			self.content()
 		}
 		.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-		.foregroundColor(Color.white)
 		.cornerRadius(10)
 		.shadow(radius: 7)
 		.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())
 		.animation(dragState.isDragging ? nil : .interactiveSpring())
 		.gesture(drag)
+		.gesture(tap)
 		
 	}
 	
@@ -63,8 +69,7 @@ struct CardView<Content: View>: View {
 			else {
 				position = DefaultPosition.middle
 			}
-		}
-		else {
+		} else {
 			if (relativePosition > DefaultPosition.middle.rawValue) {
 				position = DefaultPosition.bottom
 			}
@@ -118,17 +123,4 @@ enum DragState {
 		}
 	}
 }
-
-#if DEBUG
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView {
-			VStack {
-				Text("Hello")
-				Text("Hello")
-			}
-		}
-    }
-}
-#endif
 

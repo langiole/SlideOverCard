@@ -12,11 +12,12 @@ struct ContentView: View {
     var body: some View {
 		ZStack {
 			MapView()
-			CardView(blurEnabled: true) {
+			CardView(backgroundColor: UIColor.secondarySystemBackground) {
 				VStack {
 					Text("Hello")
 					Text("Hello")
 				}
+				
 			}
 		}
 		.edgesIgnoringSafeArea(.vertical)
@@ -27,6 +28,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+			.environment(\.colorScheme, .dark)
     }
 }
 #endif
