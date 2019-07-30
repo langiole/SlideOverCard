@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
 		ZStack {
 			MapView()
-			CardView(backgroundColor: UIColor.secondarySystemBackground) {
+			CardView(backgroundColor: .secondarySystemBackground) {
 				VStack {
 					Text("Hello")
 					Text("Hello")

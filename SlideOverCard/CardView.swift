@@ -14,9 +14,8 @@ struct CardView<Content: View>: View {
 	@State private var v_abs = 0.0
 	@State private var dist = 0.0
 	var blurEnabled: Bool = false
-	var backgroundColor: UIColor = UIColor.tertiarySystemBackground
+	var backgroundColor: UIColor = .tertiarySystemBackground
 	var content: () -> Content
-	
 	
 	var body: some View {
 		let drag = DragGesture()
@@ -34,13 +33,16 @@ struct CardView<Content: View>: View {
 			}
 		
 		return ZStack {
-			BackgroundView(blurEnabled: self.blurEnabled, backgroundColor: self.backgroundColor)
-				.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+			if blurEnabled {
+				BlurView()
+					.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+			}
 			Handle()
 				.padding(.bottom, 881)
 			self.content()
 		}
 		.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+		.foregroundColor(Color.red)
 		.cornerRadius(10)
 		.shadow(radius: 7)
 		.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())

@@ -13,7 +13,7 @@ struct Handle: View {
     var body: some View {
         RoundedRectangle(cornerRadius: handleThickness / 2.0)
             .frame(width: 36, height: handleThickness)
-            .foregroundColor(Color.secondary)
             .padding(5)
+			.foregroundColor(Color(uiColor: .tertiaryLabel))
     }
 }

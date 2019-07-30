@@ -8,20 +8,14 @@
 
 import SwiftUI
 
-struct BlurView: UIViewRepresentable {
+struct BlurView: UIViewRepresentable {	
 	func makeUIView(context: Context) -> UIView {
 		let blurEffect = UIBlurEffect(style: .systemThinMaterial)
-		let blurView = UIVisualEffectView(effect: blurEffect)
-		
-		return blurView
+		return UIVisualEffectView(effect: blurEffect)
 	}
 	func updateUIView(_ view: UIView, context: Context) {
 
 	}
 	
 }
-struct BlurView_Preview: PreviewProvider {
-	static var previews: some View {
-		BlurView()
-	}
-}
+
