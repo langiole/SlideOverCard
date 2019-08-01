@@ -29,22 +29,36 @@ struct CardView<Content: View>: View {
 					self.position = DefaultPosition.top
 				}
 			}
-		
 		return ZStack {
-			BackgroundView(blurEnabled: blurEnabled, backgroundColor: backgroundColor)
-				.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-			Handle()
-				.padding(.bottom, 881)
-			self.content()
+			if linearDrag() < DefaultPosition.middle.rawValue {
+				Color.black
+					.opacity(calculateAlpha())
+			}
+			ZStack {
+				BackgroundView(blurEnabled: blurEnabled, backgroundColor: backgroundColor)
+				Handle()
+					.padding(.bottom, 1381)
+				self.content()
+			}
+			.cornerRadius(10)
+			.shadow(radius: 7)
+			.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())
+			.animation(dragState.isDragging ? nil : .interactiveSpring())
+			.gesture(drag)
+			.gesture(tap)
+			
 		}
-		.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-		.cornerRadius(10)
-		.shadow(radius: 7)
-		.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())
-		.animation(dragState.isDragging ? nil : .interactiveSpring())
-		.gesture(drag)
-		.gesture(tap)
+		.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 500)
 		
+		
+	}
+	
+	func calculateAlpha() -> Double {
+		if (linearDrag() < DefaultPosition.top.rawValue) { return 0.3 }
+		else {
+			let a = abs(linearDrag() - DefaultPosition.middle.rawValue) / (DefaultPosition.middle.rawValue - DefaultPosition.top.rawValue)
+			return Double(a) * 0.3
+		}
 	}
 	
 	func linearDrag() -> CGFloat {
@@ -52,7 +66,8 @@ struct CardView<Content: View>: View {
 	}
 	
 	func logDrag() -> CGFloat {
-		return DefaultPosition.top.rawValue - pow(-dragState.translation.height, 0.7)
+		let relativeHeightTranslation =  -dragState.translation.height - (position.rawValue - DefaultPosition.top.rawValue)
+		return (DefaultPosition.top.rawValue) - pow(relativeHeightTranslation, 0.7)
 	}
 	
 	func dragEnded(drag: DragGesture.Value) {
@@ -96,9 +111,9 @@ struct CardView<Content: View>: View {
 
 
 enum DefaultPosition: CGFloat {
-	case top = 56.0
-	case middle = 571.0
-	case bottom = 792.0
+	case top = 306
+	case middle = 821
+	case bottom = 1042
 }
 
 enum DragState {
