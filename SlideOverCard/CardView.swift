@@ -33,22 +33,23 @@ struct CardView<Content: View>: View {
 			if linearDrag() < DefaultPosition.middle.rawValue {
 				Color.black
 					.opacity(calculateAlpha())
-			}
-			ZStack {
-				BackgroundView(blurEnabled: blurEnabled, backgroundColor: backgroundColor)
-				Handle()
-					.padding(.bottom, 1381)
-				self.content()
-			}
-			.cornerRadius(10)
-			.shadow(radius: 7)
-			.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())
-			.animation(dragState.isDragging ? nil : .interactiveSpring())
-			.gesture(drag)
-			.gesture(tap)
+					.offset(y: -1425)
+			} else { Color.black.hidden() }
 			
+			BackgroundView(blurEnabled: blurEnabled, backgroundColor: backgroundColor)
+				.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 500)
+				.cornerRadius(10)
+			Handle()
+				.padding(.bottom, 1381)
+			self.content()
 		}
-		.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 500)
+		.shadow(radius: 7)
+		.offset(y: position.rawValue + dragState.translation.height < DefaultPosition.top.rawValue ? logDrag(): linearDrag())
+		.animation(dragState.isDragging ? nil : .interactiveSpring())
+		.gesture(drag)
+		.gesture(tap)
+		
+		
 		
 		
 	}
@@ -126,15 +127,6 @@ enum DragState {
 			return .zero
 		case .dragging(let translation):
 			return translation
-		}
-	}
-	
-	var isActive: Bool {
-		switch self {
-		case .inactive:
-			return false
-		case .dragging:
-			return true
 		}
 	}
 	

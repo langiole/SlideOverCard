@@ -14,7 +14,7 @@ struct BackgroundView: UIViewRepresentable {
 	
 	func makeUIView(context: Context) -> UIView {
 		if blurEnabled {
-			let blurEffect = UIBlurEffect(style: .systemThinMaterial)
+			let blurEffect = UIBlurEffect(style: .systemThickMaterial)
 			return UIVisualEffectView(effect: blurEffect)
 	
 		} else {
