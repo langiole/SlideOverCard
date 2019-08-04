@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CardView<Content: View>: View {
 	@GestureState private var dragState = DragState.inactive
-	@State private var position = DefaultPosition.bottom
+	@State private var position = DefaultPosition.middle
 	var blurEnabled: Bool = false
 	var backgroundColor: UIColor = .secondarySystemBackground
 	var content: () -> Content
@@ -48,17 +48,13 @@ struct CardView<Content: View>: View {
 		.animation(dragState.isDragging ? nil : .interactiveSpring())
 		.gesture(drag)
 		.gesture(tap)
-		
-		
-		
-		
 	}
 	
 	func calculateAlpha() -> Double {
-		if (linearDrag() < DefaultPosition.top.rawValue) { return 0.3 }
+		if (linearDrag() < DefaultPosition.top.rawValue) { return (exp(1) - 1) * 0.2 }
 		else {
 			let a = abs(linearDrag() - DefaultPosition.middle.rawValue) / (DefaultPosition.middle.rawValue - DefaultPosition.top.rawValue)
-			return Double(a) * 0.3
+			return (exp(Double(a)) - 1) * 0.2
 		}
 	}
 	
